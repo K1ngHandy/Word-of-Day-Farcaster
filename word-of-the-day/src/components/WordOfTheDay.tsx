@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import Parser from 'rss-parser';
 
 const parser = new Parser();
@@ -50,7 +50,7 @@ export default function WordOfTheDay() {
                 <p className='mb-4'>
                     <strong>Definition:</strong> {getDefinition(description)}
                 </p>
-                <div className='flsx justify-end mt-6'>
+                <div className='flex justify-end mt-6'>
                     <button className='bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition'
                         onClick={() => setCurrentIndex((prev) => (prev + 1) % entries.length)}
                     >
