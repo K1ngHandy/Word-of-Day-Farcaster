@@ -1,6 +1,7 @@
 import { sdk } from "@farcaster/frame-sdk";
 import { useEffect } from "react";
 import { useAccount, useConnect, useSignMessage } from "wagmi";
+import WordOfTheDay from "./components/WordOfTheDay";
 
 function App() {
   useEffect(() => {
@@ -8,10 +9,16 @@ function App() {
   }, []);
 
   return (
-    <>
-      <div>Mini App + Vite + TS + React + Wagmi</div>
-      <ConnectMenu />
-    </>
+    <div className="min-h-screen bg-gray-100">
+      <WordOfTheDay />
+
+      <div className="container mx-auto py-8">
+        <div className="bg-white p-6 rounded-lg shadow-md">
+          <h2 className="text-xl font-bold mb-4">Wallet Connection</h2>
+          <ConnectMenu />
+        </div>
+      </div>
+    </div >
   );
 }
 
